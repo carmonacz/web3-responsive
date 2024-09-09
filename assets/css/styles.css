@@ -18,6 +18,8 @@
   --color-instagram: #ea4c89;
   --color-youtube: #cc181e;
   --color-linkedin: #f4a52a;
+  --color-footer: #222;
+  --color-footer-down: #111;
 }
 
 /* ESTILOS GENERALES */
@@ -627,7 +629,8 @@ body {
 .video__author,
 .main-post__author,
 .news__author,
-.post__author {
+.post__author,
+.recent__autor {
   font-weight: 500;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -658,14 +661,16 @@ body {
 .highlights__footer-post,
 .footer-post__container,
 .footer-info__container,
-.post__footer-post {
+.post__footer-post,
+.recent__meta-info {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
 }
 
 .footer-post__container,
-.footer-info__container {
+.footer-info__container,
+.recent__meta-info {
   gap: 1rem;
 }
 
@@ -674,7 +679,9 @@ body {
 .main-video__views,
 .main-video__comments,
 .main-post__views,
-.main-post__comments {
+.main-post__comments,
+.recent__views,
+.recent__comments {
   display: inline-block;
   font-weight: 400;
   font-size: 1.1rem;
@@ -684,13 +691,17 @@ body {
 .footer-post__views > .fa-solid,
 .footer-post__comments > .fa-solid,
 .main-video__views > .fa-solid,
-.main-video__comments > .fa-solid .main-post__views > .fa-solid,
-.main-post__comments > .fa-solid {
+.main-video__comments > .fa-solid,
+.main-post__views > .fa-solid,
+.main-post__comments > .fa-solid,
+.recent__views > .fa-solid,
+.recent__comments > .fa-solid {
   margin-right: 0.2rem;
   font-size: 1.2rem;
 }
 
-.footer-post__comments > a {
+.footer-post__comments > a,
+.recent__comments > a {
   display: inline;
 }
 
@@ -1229,7 +1240,8 @@ body {
   margin-bottom: 3rem;
 }
 
-.posts__list-header {
+.posts__list-header,
+.recent__list-header {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -1425,4 +1437,454 @@ body {
 
 .tweets__content {
   margin-bottom: 3rem;
+}
+
+/* ESTILOS POST RECIENTES */
+.aside__recent {
+  margin-bottom: 3rem;
+}
+
+.aside__recent .list-header__title {
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.aside__recent .list-header--small {
+  background: none;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+
+.list-header__link-title {
+  color: var(--color-principal);
+}
+
+.recent__list-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recent__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.recent__container-img {
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+}
+
+.recnt__img {
+  width: 100%;
+  transition: all 300ms;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -o-transition: all 300ms;
+}
+
+.recnt__img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.recent__detail {
+  width: 100%;
+}
+
+.recent__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.recent__link-title {
+  color: var(--color-titles);
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.recent__link-title:hover {
+  color: var(--color-secondary);
+}
+
+.recent__container-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ESTILOS ULTIMAS REVIEWS */
+.aside__last-reviews {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.aside__last-reviews .last-reviews__subheader {
+  padding: 0.15rem 0.5rem;
+}
+
+.aside__last-reviews .last-reviews__list-header {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aside__last-reviews .last-reviews__link-title {
+  color: var(--color-principal);
+}
+
+.aside__last-reviews .last-reviews__link-title--small {
+  background: none;
+  font-size: 1.1rem;
+}
+
+.last-reviews__list-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.list-reviews__item {
+  width: 100%;
+}
+
+.list-reviews__container-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-reviews__title {
+  text-align: left;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.list-reviews__title-link {
+  color: var(--color-titles);
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+
+.list-reviews__title-link:hover {
+  color: var(--color-secondary);
+}
+
+.list-reviews__mark {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-titles);
+}
+
+.list-reviews__progressbar {
+  margin-top: 0.2rem;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--color-bg-navbar);
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.list-reviews__bar {
+  height: 100%;
+  background-color: var(--color-secondary);
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.list-reviews__bar--bar1 {
+  width: 75%;
+}
+
+.list-reviews__bar--bar2 {
+  width: 65%;
+}
+
+.list-reviews__bar--bar3 {
+  width: 81%;
+}
+
+.list-reviews__bar--bar4 {
+  width: 55%;
+}
+
+.list-reviews__bar--bar5 {
+  width: 90%;
+}
+
+/* estilos boton main */
+.posts__read-more {
+  padding: 0.4rem;
+  width: 100%;
+  color: var(--color-titles);
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border: 1px solid var(--color-bg-navbar);
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+
+.posts__read-more:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-principal);
+  border-color: var(--color-secondary);
+}
+
+/* ESTILOS FOOTER */
+.layout__footer {
+  width: 100%;
+  background-color: var(--color-footer);
+  color: var(--color-principal);
+}
+
+.footer__container {
+  width: 55%;
+  min-width: 100rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+/* FOOTER LEFT */
+.footer__left-container {
+  flex-basis: 33%;
+}
+
+.footer__about {
+  margin-bottom: 3rem;
+}
+
+.about__titile,
+.tags__title,
+.footer__title {
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.about__description {
+  font-size: 1.3rem;
+  color: var(--color-principal);
+}
+
+.tags__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tags__tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--color-principal);
+  font-size: 1.3rem;
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.tags__tag:hover {
+  background-color: transparent;
+}
+
+/* FOOTER CENTER */
+.footer__center-container {
+  flex-basis: 33%;
+}
+
+.footer__list-popular {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.list-popular__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.list-popular__container-img {
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+}
+
+.list-popular__img {
+  width: 100%;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.list-popular__img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.list-popular__detail {
+  flex-basis: 75%;
+}
+
+.list-popular__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.list-popular__container-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list-popular__author {
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.list-popular__meta-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.list-popular__meta-views,
+.list-popular__meta-coments {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-text-marquee);
+  margin-right: 1rem;
+}
+
+/* FOOTER RIGHT */
+.footer__right-container {
+  flex-basis: 33%;
+}
+
+.footer__fslider {
+  position: relative;
+  width: 33rem;
+  height: 22rem;
+  overflow: hidden;
+}
+
+.fslider__img {
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.fslider__img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.fslider__info {
+  position: absolute;
+  width: 100%;
+  padding: 0 1rem;
+  top: 38%;
+  text-align: center;
+  color: var(--color-principal);
+}
+
+.fslider__category {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.fslider__separator {
+  display: block;
+  margin: 0 auto;
+  width: 6rem;
+  height: 0.2rem;
+  background-color: var(--color-secondary);
+}
+
+.fslider__title {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px var(--color-titles);
+}
+
+.fslider__link {
+  color: var(--color-principal);
+}
+
+/* Footer description */
+.footer__description {
+  padding: 2rem;
+  color: var(--color-principal);
+  background-color: var(--color-footer-down);
+}
+
+.footer__text {
+  width: 55%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  white-space: nowrap;
 }
