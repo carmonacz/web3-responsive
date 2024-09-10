@@ -11,6 +11,7 @@
     <!-- Estilos Generales y Reset -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <!-- JavaScript -->
 
     <title>Noticias de Videojuegoos - Maquetación 3</title>
@@ -33,6 +34,15 @@
       <!-- Navegador -->
       <section class="layout__nav">
         <nav class="nav__navbar">
+          <!-- Boton menu responsive -->
+          <div class="navbar__mobile-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <!-- El menu responsive -->
+          <ul class="navbar__mobile-list"></ul>
+
+          <!-- Navegación escritorio -->
           <ul class="navbar__list">
             <li class="navbar__item">
               <a href="#" class="navbar__link">NOTICIAS</a>
@@ -521,6 +531,8 @@
               </div>
             </li>
           </ul>
+
+          <!-- BUSCADOR -->
           <form class="navbar__search">
             <input type="text" class="search__input" name="search" placeholder="Buscar" />
             <div class="navbar__btn-search">
@@ -2162,5 +2174,7 @@
         </div>
       </section>
     </footer>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/marquee.js"></script>
   </body>
 </html>
